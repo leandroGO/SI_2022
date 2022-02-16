@@ -1,0 +1,10 @@
+POST /P1-ws-ws/VisaDAOWSService HTTP/1.1
+Accept: text/xml, multipart/related
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://dao.visa.ssii2/VisaDAOWS/realizaPagoRequest"
+User-Agent: Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown
+Host: 10.3.69.1:8097
+Connection: keep-alive
+Content-Length: 545
+
+<?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><ns2:realizaPago xmlns:ns2="http://dao.visa.ssii2/"><pago><idComercio>1212</idComercio><idTransaccion>11</idTransaccion><importe>5.0</importe><rutaRetorno>/pago.html</rutaRetorno><tarjeta><codigoVerificacion>207</codigoVerificacion><fechaCaducidad>01/16</fechaCaducidad><fechaEmision>11/09</fechaEmision><numero>2347 4840 5058 7931</numero><titular>Gabriel Avila Locke</titular></tarjeta></pago></ns2:realizaPago></S:Body></S:Envelope>

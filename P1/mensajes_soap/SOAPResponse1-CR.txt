@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+X-Powered-By: Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.0  Java/Oracle Corporation/1.8)
+Server: GlassFish Server Open Source Edition  4.0 
+Content-Type: text/xml;charset=utf-8
+Date: Tue, 17 Feb 2015 20:55:02 GMT
+Transfer-Encoding: chunked
+
+6e
+<?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body>
+8b
+<ns2:compruebaTarjetaResponse xmlns:ns2="http://dao.visa.ssii2/"><return>true</return></ns2:compruebaTarjetaResponse></S:Body></S:Envelope>
+0
+

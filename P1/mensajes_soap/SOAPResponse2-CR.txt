@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+X-Powered-By: Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.0  Java/Oracle Corporation/1.8)
+Server: GlassFish Server Open Source Edition  4.0 
+Content-Type: text/xml;charset=utf-8
+Date: Tue, 17 Feb 2015 22:13:44 GMT
+Transfer-Encoding: chunked
+
+6e
+<?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body>
+209
+<ns2:realizaPagoResponse xmlns:ns2="http://dao.visa.ssii2/"><return><codRespuesta>000</codRespuesta><idAutorizacion>1</idAutorizacion><idComercio>1212</idComercio><idTransaccion>11</idTransaccion><importe>5.0</importe><rutaRetorno>/pago.html</rutaRetorno><tarjeta><codigoVerificacion>207</codigoVerificacion><fechaCaducidad>01/16</fechaCaducidad><fechaEmision>11/09</fechaEmision><numero>2347 4840 5058 7931</numero><titular>Gabriel Avila Locke</titular></tarjeta></return></ns2:realizaPagoResponse></S:Body></S:Envelope>
+0
