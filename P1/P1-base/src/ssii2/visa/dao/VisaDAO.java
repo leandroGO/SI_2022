@@ -26,7 +26,7 @@ import java.util.ArrayList;
  */
 public class VisaDAO extends DBTester {
 
-    private boolean debug = false;
+    private boolean debug = true;
 
     /**
      * TODO: Declarar un atributo booleano "prepared"
