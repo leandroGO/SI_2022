@@ -24,7 +24,7 @@ import java.util.ArrayList;
 /**
  * @author jaime
  */
-public class VisaDAO extends DBTester {
+public class VisaDAOWS extends DBTester {
 
     private boolean debug = true;
 
@@ -77,7 +77,7 @@ public class VisaDAO extends DBTester {
     /**
      * Constructor de la clase     
      */
-    public VisaDAO() {
+    public VisaDAOWS() {
         return;
     }
 
