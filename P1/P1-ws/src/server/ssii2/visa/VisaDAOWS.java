@@ -469,6 +469,7 @@ public class VisaDAOWS extends DBTester {
     /**
      * @param debug the debug to set
      */
+    @WebMethod(exclude = true)
     public void setDebug(boolean debug) {
         this.debug = debug;
     }
