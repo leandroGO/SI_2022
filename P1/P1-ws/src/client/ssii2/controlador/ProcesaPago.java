@@ -25,7 +25,7 @@
  * es correcto se redirige a pagoexitoso.jsp. En caso contrario, se redirige
  * al error correspondiente.
  *
- * @see ssii2.visa.dao.VisaDAO
+ * @see ssii2.visa.VisaDAOWS
  * @see ssii2.visa.TarjetaBean
  * @see ssii2.visa.PagoBean
  */
@@ -49,6 +49,10 @@ import ssii2.visa.VisaDAOWSService; // Stub generado automáticamente
 import ssii2.visa.VisaDAOWS; // Stub generado automáticamente
 import javax.xml.ws.WebServiceRef;
 
+import ssii2.visa.PagoBean;
+import ssii2.visa.TarjetaBean;
+import ssii2.visa.ValidadorTarjeta;
+import javax.xml.ws.BindingProvider;
 /**
  *
  * @author phaya
