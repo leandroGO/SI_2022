@@ -23,6 +23,9 @@ import ssii2.visa.VisaDAOWS; // Stub generado automáticamente
 import javax.xml.ws.WebServiceRef;
 import javax.xml.ws.BindingProvider;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author phaya
@@ -69,7 +72,9 @@ public class GetPagos extends ServletRaiz {
 		String idComercio = request.getParameter(PARAM_ID_COMERCIO);
 		
 		/* Petici&oacute;n de los pagos para el comercio */
-		PagoBean[] pagos = (PagoBean[]) dao.getPagos(idComercio).toArray(); //Cambio tipo para JAXB        
+		List<PagoBean> aux = dao.getPagos(idComercio); //Cambio tipo para JAXB
+        PagoBean[] pagos = new PagoBean[aux.size()];
+        pagos = aux.toArray(pagos);
 
         request.setAttribute(ATTR_PAGOS, pagos);
         reenvia("/listapagos.jsp", request, response);
