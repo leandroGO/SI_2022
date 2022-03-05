@@ -33,7 +33,6 @@
 package ssii2.controlador;
 
 import java.io.IOException;
-import java.io.Serializable;    // TODO: Ej5
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
@@ -56,7 +55,7 @@ import ssii2.visa.VisaDAOLocal;
  *
  * @author phaya
  */
-public class ProcesaPago extends ServletRaiz implements Serializable { // TODO: Ej5
+public class ProcesaPago extends ServletRaiz {
     @EJB(name="VisaDAOBean", beanInterface=VisaDAOLocal.class)
     private VisaDAOLocal dao;
 
