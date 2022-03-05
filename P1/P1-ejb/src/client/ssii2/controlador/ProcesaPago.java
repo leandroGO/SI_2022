@@ -197,7 +197,6 @@ private void printAddresses(HttpServletRequest request, HttpServletResponse resp
             return;
         }
 
-
         if ((pago = dao.realizaPago(pago)) == null) {
             enviaError(new Exception("Pago incorrecto"), request, response);
             return;

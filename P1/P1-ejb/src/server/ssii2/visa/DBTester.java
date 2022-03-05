@@ -24,8 +24,8 @@ public class DBTester {
     /*********************************************************/
     private static final String JDBC_CONNSTRING =
             //"jdbc:derby://10.1.1.1:1527/visa;create=true";
-            //"jdbc:postgresql://10.1.11.1:5432/visa";
-            "jdbc:postgresql://10.250.1.70:5432/visa";
+            "jdbc:postgresql://10.1.11.1:5432/visa";
+            //"jdbc:postgresql://10.250.1.70:5432/visa";
     /*********************************************************/
     private static final String JDBC_USER = "alumnodb";
     private static final String JDBC_PASSWORD = "****";
