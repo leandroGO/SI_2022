@@ -13,7 +13,7 @@ import java.io.Serializable;    // TODO: Ej5
  *
  * @author jaime
  */
-public class TarjetaBean implements Serializable {
+public class PagoBean implements Serializable {
 
     private String idTransaccion;
     private String idComercio;

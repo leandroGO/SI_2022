@@ -150,19 +150,19 @@ private void printAddresses(HttpServletRequest request, HttpServletResponse resp
             return;
         }
 
-		VisaDAO dao = new VisaDAO();
-		HttpSession sesion = request.getSession(false);
-		if (sesion != null) {
-			pago = (PagoBean) sesion.getAttribute(ComienzaPago.ATTR_PAGO);
-		}
-		if (pago == null) {
-			pago = creaPago(request);
-			boolean isdebug = Boolean.valueOf(request.getParameter("debug"));
-			dao.setDebug(isdebug);
-			boolean isdirectConnection = Boolean.valueOf(request.getParameter("directConnection"));
-			dao.setDirectConnection(isdirectConnection);
-			boolean usePrepared = Boolean.valueOf(request.getParameter("usePrepared"));
-			dao.setPrepared(usePrepared);
+        //VisaDAO dao = new VisaDAO();
+        HttpSession sesion = request.getSession(false);
+        if (sesion != null) {
+            pago = (PagoBean) sesion.getAttribute(ComienzaPago.ATTR_PAGO);
+        }
+        if (pago == null) {
+            pago = creaPago(request);
+            boolean isdebug = Boolean.valueOf(request.getParameter("debug"));
+            dao.setDebug(isdebug);
+            boolean isdirectConnection = Boolean.valueOf(request.getParameter("directConnection"));
+            dao.setDirectConnection(isdirectConnection);
+            boolean usePrepared = Boolean.valueOf(request.getParameter("usePrepared"));
+            dao.setPrepared(usePrepared);
         }
 
         // Almacenamos la tarjeta en el pago
@@ -173,7 +173,7 @@ private void printAddresses(HttpServletRequest request, HttpServletResponse resp
             return;
         }
 
-	if (! dao.realizaPago(pago)) {
+    if ((pago = dao.realizaPago(pago)) == null) {
             enviaError(new Exception("Pago incorrecto"), request, response);
             return;
         }
