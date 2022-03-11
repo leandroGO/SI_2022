@@ -215,6 +215,7 @@ public class VisaDAOBean extends DBTester implements VisaDAOLocal {
         ResultSet rs = null;
         boolean ret = false;
         String codRespuesta = "999"; // En principio, denegado
+        double saldo = 0;
 
         // TODO: Utilizar en funcion de isPrepared()
         PreparedStatement pstmt = null;
@@ -244,12 +245,18 @@ public class VisaDAOBean extends DBTester implements VisaDAOLocal {
                 pstmt.setString(1, pago.getTarjeta().getNumero());
                 ret = false;
                 rs = pstmt.executeQuery();
-                double saldo = rs.getDouble(1);
-                if (saldo < pago.getImporte()) {
-                    pago.setIdAutorizacion(null);
-                }
-                else {
-                    ret = true;
+
+                if (rs.next()) {
+                    saldo = rs.getDouble("saldo");
+                    if (saldo < pago.getImporte()) {
+                        pago.setIdAutorizacion(null);
+                    }
+                    else {
+                        ret = true;
+                    }
+
+                } else {
+                    ret = false;
                 }
                 pstmt.close();
 
