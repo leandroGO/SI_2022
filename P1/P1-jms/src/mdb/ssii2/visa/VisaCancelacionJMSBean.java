@@ -33,12 +33,12 @@ public class VisaCancelacionJMSBean extends DBTester implements MessageListener 
     // TODO : Definir UPDATE sobre la tabla pagos para poner
     // codRespuesta a 999 dado un código de autorización
     private static final String UPDATE_CANCELA_QRY =
-        "update pagos " +
+        "update pago " +
         "set codRespuesta=999 " +
         "where idAutorizacion=?";
     private static final String SELECT_CODRESPUESTA_QRY =
         "select codRespuesta " +
-        "from pagos "+
+        "from pago "+
         "where idAutorizacion=?";
     private static final String UPDATE_TARJETA_QRY =
         "update tarjeta " +
@@ -68,23 +68,26 @@ public class VisaCancelacionJMSBean extends DBTester implements MessageListener 
                 logger.info("MESSAGE BEAN: Message received: " + msg.getText());
 
                 idAutorizacion = Integer.parseInt(msg.getText());
-                con = Connection.getConnection();
+                con = getConnection();
                 pstmt = con.prepareStatement(SELECT_CODRESPUESTA_QRY);
-                errorLog(SELECT_CODRESPUESTA_QRY);
 
-                pstmt.setInteger(1, idAutorizacion);
+                pstmt.setInt(1, idAutorizacion);
                 rs = pstmt.executeQuery();
-                pstmt.close();
 
-                int codRespuesta = rs.getString("codRespuesta");
+                if (!rs.next()) {
+                    logger.info("MESSAGE BEAN: Identifier not found");
+                    throw new EJBException("Identifier not found");
+                }
+                String codRespuesta = rs.getString("codRespuesta");
                 rs.close();
+                rs = null;
+                pstmt.close();
                 if (codRespuesta.equals("000")) {
                     // Cancela pago
                     pstmt = con.prepareStatement(UPDATE_CANCELA_QRY);
-                    errorLog(UPDATE_CANCELA_QRY);
-                    pstmt.setInteger(1, idAutorizacion);
+                    pstmt.setInt(1, idAutorizacion);
 
-                    if (pstmt.execute() || pstmt.getUpdateCount() =! 1) {
+                    if (pstmt.execute() || pstmt.getUpdateCount() != 1) {
                         throw new EJBException();
                     }
                     pstmt.close();
@@ -92,10 +95,9 @@ public class VisaCancelacionJMSBean extends DBTester implements MessageListener 
 
                     // Rectifica saldo
                     pstmt = con.prepareStatement(UPDATE_TARJETA_QRY);
-                    errorLog(UPDATE_TARJETA_QRY);
-                    pstmt.setInteger(1, idAutorizacion);
+                    pstmt.setInt(1, idAutorizacion);
 
-                    if (pstmt.execute() || pstmt.getUpdateCount() =! 1) {
+                    if (pstmt.execute() || pstmt.getUpdateCount() != 1) {
                         throw new EJBException();
                     }
                     pstmt.close();

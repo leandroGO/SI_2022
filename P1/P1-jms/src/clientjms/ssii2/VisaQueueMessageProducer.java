@@ -81,16 +81,34 @@ public class VisaQueueMessageProducer {
                 browseMessages(session); 
             } else {
                 // TODO: Enviar argv[0] como mensaje de texto
+                messageProducer = session.createProducer(queue);
+                message = session.createTextMessage();
+                message.setText(args[0]);
+                messageProducer.send(message);
             }
         } catch (Exception e) {
             System.out.println("Excepcion : " + e.toString());
         } finally {
+            if (messageProducer != null) {
+                try {
+                    messageProducer.close();
+                } catch (JMSException e) {
+                }  
+            }
+
+            if (session != null) {
+                try {
+                    session.close();
+                } catch (JMSException e) {
+                }
+            }
+
             if (connection != null) {
                 try {
                     connection.close();
                 } catch (JMSException e) {
                 }
-            } // if
+            }
 
             System.exit(0);
         } // finally
