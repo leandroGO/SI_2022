@@ -1,91 +1,83 @@
-<<<<<<< HEAD
-2022-03-23 12:09:18,856 INFO o.a.j.u.JMeterUtils: Setting Locale to es_ES
-2022-03-23 12:09:18,871 INFO o.a.j.u.JMeterUtils: Could not find resources for 'es_ES', using 'es'
-2022-03-23 12:09:18,874 INFO o.a.j.JMeter: Loading user properties from: /home/alumnos/e402064/UnidadH/SI_2022/P2/apache-jmeter-5.2.1/bin/user.properties
-2022-03-23 12:09:18,877 INFO o.a.j.JMeter: Loading system properties from: /home/alumnos/e402064/UnidadH/SI_2022/P2/apache-jmeter-5.2.1/bin/system.properties
-2022-03-23 12:09:18,878 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
-2022-03-23 12:09:18,878 INFO o.a.j.JMeter: Version 5.2.1
-2022-03-23 12:09:18,878 INFO o.a.j.JMeter: java.version=1.8.0_201
-2022-03-23 12:09:18,878 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
-2022-03-23 12:09:18,878 INFO o.a.j.JMeter: os.name=Linux
-2022-03-23 12:09:18,878 INFO o.a.j.JMeter: os.arch=amd64
-2022-03-23 12:09:18,879 INFO o.a.j.JMeter: os.version=4.15.0-166-generic
-2022-03-23 12:09:18,879 INFO o.a.j.JMeter: file.encoding=UTF-8
-2022-03-23 12:09:18,879 INFO o.a.j.JMeter: java.awt.headless=null
-2022-03-23 12:09:18,879 INFO o.a.j.JMeter: Max memory     =1724383232
-2022-03-23 12:09:18,879 INFO o.a.j.JMeter: Available Processors =4
-2022-03-23 12:09:18,886 INFO o.a.j.JMeter: Default Locale=español (España)
-2022-03-23 12:09:18,886 INFO o.a.j.JMeter: JMeter  Locale=español (España)
-2022-03-23 12:09:18,886 INFO o.a.j.JMeter: JMeterHome=/home/alumnos/e402064/UnidadH/SI_2022/P2/apache-jmeter-5.2.1
-2022-03-23 12:09:18,886 INFO o.a.j.JMeter: user.dir  =/home/alumnos/e402064/UnidadH/SI_2022/P2
-2022-03-23 12:09:18,886 INFO o.a.j.JMeter: PWD       =/home/alumnos/e402064/UnidadH/SI_2022/P2
-2022-03-23 12:09:18,887 INFO o.a.j.JMeter: IP: 10.250.1.26 Name: 1-26-1-26 FullName: 1-26-1-26
-2022-03-23 12:09:19,422 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
-2022-03-23 12:09:19,464 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
-2022-03-23 12:09:19,464 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
-2022-03-23 12:09:19,536 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
-2022-03-23 12:09:21,326 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2022-03-23 12:09:21,327 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2022-03-23 12:09:21,327 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2022-03-23 12:09:21,327 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2022-03-23 12:09:21,327 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2022-03-23 12:09:21,327 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2022-03-23 12:09:21,833 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
-2022-03-23 12:09:21,833 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /home/alumnos/e402064/UnidadH/SI_2022/P2/apache-jmeter-5.2.1/bin/proxyserver.jks
-2022-03-23 12:09:21,930 INFO o.a.j.s.FileServer: Default base='/home/alumnos/e402064/UnidadH/SI_2022/P2'
-2022-03-23 12:09:22,179 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2022-03-23 12:09:22,179 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
-2022-03-23 12:09:22,179 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2022-03-23 12:09:22,179 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2022-03-23 12:09:31,048 INFO o.a.j.g.a.Load: Loading file: /home/alumnos/e402064/UnidadH/SI_2022/P2/P2.jmx
-2022-03-23 12:09:31,049 INFO o.a.j.s.FileServer: Set new base='/home/alumnos/e402064/UnidadH/SI_2022/P2'
-2022-03-23 12:09:31,262 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2022-03-23 12:09:31,328 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2022-03-23 12:09:31,333 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2022-03-23 12:09:31,340 INFO o.a.j.s.SaveService: Loading file: /home/alumnos/e402064/UnidadH/SI_2022/P2/P2.jmx
-2022-03-23 12:09:31,451 INFO o.a.j.s.FileServer: Set new base='/home/alumnos/e402064/UnidadH/SI_2022/P2'
-=======
-2022-03-16 17:46:48,446 INFO o.a.j.u.JMeterUtils: Setting Locale to es_ES
-2022-03-16 17:46:48,462 INFO o.a.j.u.JMeterUtils: Could not find resources for 'es_ES', using 'es'
-2022-03-16 17:46:48,462 INFO o.a.j.JMeter: Loading user properties from: /home/alumnos/e402064/SI_2022/P2/apache-jmeter-5.2.1/bin/user.properties
-2022-03-16 17:46:48,463 INFO o.a.j.JMeter: Loading system properties from: /home/alumnos/e402064/SI_2022/P2/apache-jmeter-5.2.1/bin/system.properties
-2022-03-16 17:46:48,464 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
-2022-03-16 17:46:48,464 INFO o.a.j.JMeter: Version 5.2.1
-2022-03-16 17:46:48,464 INFO o.a.j.JMeter: java.version=1.8.0_201
-2022-03-16 17:46:48,464 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
-2022-03-16 17:46:48,464 INFO o.a.j.JMeter: os.name=Linux
-2022-03-16 17:46:48,464 INFO o.a.j.JMeter: os.arch=amd64
-2022-03-16 17:46:48,464 INFO o.a.j.JMeter: os.version=4.15.0-166-generic
-2022-03-16 17:46:48,464 INFO o.a.j.JMeter: file.encoding=UTF-8
-2022-03-16 17:46:48,464 INFO o.a.j.JMeter: java.awt.headless=null
-2022-03-16 17:46:48,464 INFO o.a.j.JMeter: Max memory     =1724383232
-2022-03-16 17:46:48,464 INFO o.a.j.JMeter: Available Processors =4
-2022-03-16 17:46:48,472 INFO o.a.j.JMeter: Default Locale=español (España)
-2022-03-16 17:46:48,472 INFO o.a.j.JMeter: JMeter  Locale=español (España)
-2022-03-16 17:46:48,472 INFO o.a.j.JMeter: JMeterHome=/home/alumnos/e402064/SI_2022/P2/apache-jmeter-5.2.1
-2022-03-16 17:46:48,472 INFO o.a.j.JMeter: user.dir  =/home/alumnos/e402064/SI_2022/P2
-2022-03-16 17:46:48,472 INFO o.a.j.JMeter: PWD       =/home/alumnos/e402064/SI_2022/P2
-2022-03-16 17:46:48,474 INFO o.a.j.JMeter: IP: 10.250.1.26 Name: 1-26-1-26 FullName: 1-26-1-26
-2022-03-16 17:46:48,797 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
-2022-03-16 17:46:48,842 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
-2022-03-16 17:46:48,842 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
-2022-03-16 17:46:48,906 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
-2022-03-16 17:46:50,559 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2022-03-16 17:46:50,559 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2022-03-16 17:46:50,559 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2022-03-16 17:46:50,559 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2022-03-16 17:46:50,559 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2022-03-16 17:46:50,560 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2022-03-16 17:46:51,108 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
-2022-03-16 17:46:51,108 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /home/alumnos/e402064/SI_2022/P2/apache-jmeter-5.2.1/bin/proxyserver.jks
-2022-03-16 17:46:51,190 INFO o.a.j.s.FileServer: Default base='/home/alumnos/e402064/SI_2022/P2'
-2022-03-16 17:46:51,414 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2022-03-16 17:46:51,414 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
-2022-03-16 17:46:51,414 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2022-03-16 17:46:51,414 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2022-03-16 17:53:09,444 INFO o.a.j.s.FileServer: Set new base='/home/alumnos/e402064/SI_2022/P2'
-2022-03-16 17:53:09,590 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2022-03-16 17:53:09,593 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2022-03-16 17:53:09,595 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2022-03-16 18:16:51,094 INFO o.a.j.s.FileServer: Set new base='/home/alumnos/e402064/SI_2022/P2'
->>>>>>> 0c241752b9d27493bf257d1af1cf0ff703f55b23
+2022-03-23 18:44:51,242 INFO o.a.j.u.JMeterUtils: Setting Locale to es_ES
+2022-03-23 18:44:51,254 INFO o.a.j.u.JMeterUtils: Could not find resources for 'es_ES', using 'es'
+2022-03-23 18:44:51,255 INFO o.a.j.JMeter: Loading user properties from: /home/alumnos/e402064/apache-jmeter-5.2.1/bin/user.properties
+2022-03-23 18:44:51,256 INFO o.a.j.JMeter: Loading system properties from: /home/alumnos/e402064/apache-jmeter-5.2.1/bin/system.properties
+2022-03-23 18:44:51,258 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
+2022-03-23 18:44:51,258 INFO o.a.j.JMeter: Version 5.2.1
+2022-03-23 18:44:51,258 INFO o.a.j.JMeter: java.version=1.8.0_111
+2022-03-23 18:44:51,258 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2022-03-23 18:44:51,258 INFO o.a.j.JMeter: os.name=Linux
+2022-03-23 18:44:51,258 INFO o.a.j.JMeter: os.arch=amd64
+2022-03-23 18:44:51,258 INFO o.a.j.JMeter: os.version=4.15.0-166-generic
+2022-03-23 18:44:51,258 INFO o.a.j.JMeter: file.encoding=UTF-8
+2022-03-23 18:44:51,258 INFO o.a.j.JMeter: java.awt.headless=null
+2022-03-23 18:44:51,258 INFO o.a.j.JMeter: Max memory     =1724383232
+2022-03-23 18:44:51,259 INFO o.a.j.JMeter: Available Processors =4
+2022-03-23 18:44:51,265 INFO o.a.j.JMeter: Default Locale=español (España)
+2022-03-23 18:44:51,265 INFO o.a.j.JMeter: JMeter  Locale=español (España)
+2022-03-23 18:44:51,265 INFO o.a.j.JMeter: JMeterHome=/home/alumnos/e402064/apache-jmeter-5.2.1
+2022-03-23 18:44:51,265 INFO o.a.j.JMeter: user.dir  =/home/alumnos/e402064/UnidadH/SI_2022/P2
+2022-03-23 18:44:51,265 INFO o.a.j.JMeter: PWD       =/home/alumnos/e402064/UnidadH/SI_2022/P2
+2022-03-23 18:44:51,266 INFO o.a.j.JMeter: IP: 10.250.1.26 Name: 1-26-1-26 FullName: 1-26-1-26
+2022-03-23 18:44:51,568 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2022-03-23 18:44:51,601 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
+2022-03-23 18:44:51,601 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
+2022-03-23 18:44:51,663 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2022-03-23 18:44:53,313 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-03-23 18:44:53,313 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-03-23 18:44:53,313 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-03-23 18:44:53,314 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-03-23 18:44:53,314 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2022-03-23 18:44:53,314 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2022-03-23 18:44:53,547 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2022-03-23 18:44:53,549 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /home/alumnos/e402064/apache-jmeter-5.2.1/bin/proxyserver.jks
+2022-03-23 18:44:53,648 INFO o.a.j.s.FileServer: Default base='/home/alumnos/e402064/UnidadH/SI_2022/P2'
+2022-03-23 18:44:53,899 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2022-03-23 18:44:53,899 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2022-03-23 18:44:53,899 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2022-03-23 18:44:53,899 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2022-03-23 18:45:29,022 INFO o.a.j.g.a.Load: Loading file: /home/alumnos/e402064/UnidadH/SI_2022/P2/P2.jmx
+2022-03-23 18:45:29,024 INFO o.a.j.s.FileServer: Set new base='/home/alumnos/e402064/UnidadH/SI_2022/P2'
+2022-03-23 18:45:29,148 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2022-03-23 18:45:29,153 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2022-03-23 18:45:29,155 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2022-03-23 18:45:29,157 INFO o.a.j.s.SaveService: Loading file: /home/alumnos/e402064/UnidadH/SI_2022/P2/P2.jmx
+2022-03-23 18:45:29,257 INFO o.a.j.s.FileServer: Set new base='/home/alumnos/e402064/UnidadH/SI_2022/P2'
+2022-03-23 18:47:17,768 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2022-03-23 18:47:17,769 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2022-03-23 18:47:17,769 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2022-03-23 18:47:17,771 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2022-03-23 18:47:17,771 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2022-03-23 18:47:17,975 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2022-03-23 18:47:18,092 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : P1-base
+2022-03-23 18:47:18,092 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-base.
+2022-03-23 18:47:18,092 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2022-03-23 18:47:18,092 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=5 delayedStart=false
+2022-03-23 18:47:18,096 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2022-03-23 18:47:18,096 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-base to finish before starting next group
+2022-03-23 18:47:18,099 INFO o.a.j.t.JMeterThread: Thread started: P1-base 1-1
+2022-03-23 18:47:18,103 INFO o.a.j.s.FileServer: Stored: datagen/listado.csv
+2022-03-23 18:47:18,109 INFO o.a.j.p.h.s.HTTPJavaImpl: Maximum connection retries = 0
+2022-03-23 18:47:18,381 INFO o.a.j.t.JMeterThread: Thread is done: P1-base 1-1
+2022-03-23 18:47:18,381 INFO o.a.j.t.JMeterThread: Thread finished: P1-base 1-1
+2022-03-23 18:47:18,382 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : P1-ws
+2022-03-23 18:47:18,382 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ws.
+2022-03-23 18:47:18,382 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2022-03-23 18:47:18,383 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=5 delayedStart=false
+2022-03-23 18:47:18,383 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2022-03-23 18:47:18,384 INFO o.a.j.e.StandardJMeterEngine: Waiting for thread group: P1-ws to finish before starting next group
+2022-03-23 18:47:18,385 INFO o.a.j.t.JMeterThread: Thread started: P1-ws 2-1
+2022-03-23 18:47:19,301 INFO o.a.j.t.JMeterThread: Thread is done: P1-ws 2-1
+2022-03-23 18:47:19,302 INFO o.a.j.t.JMeterThread: Thread finished: P1-ws 2-1
+2022-03-23 18:47:19,302 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : P1-ejb
+2022-03-23 18:47:19,302 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group P1-ejb.
+2022-03-23 18:47:19,303 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2022-03-23 18:47:19,303 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=1 ramp-up=5 delayedStart=false
+2022-03-23 18:47:19,304 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2022-03-23 18:47:19,304 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2022-03-23 18:47:19,305 INFO o.a.j.t.JMeterThread: Thread started: P1-ejb 3-1
+2022-03-23 18:47:19,679 INFO o.a.j.t.JMeterThread: Thread is done: P1-ejb 3-1
+2022-03-23 18:47:19,680 INFO o.a.j.t.JMeterThread: Thread finished: P1-ejb 3-1
+2022-03-23 18:47:19,680 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2022-03-23 18:47:19,680 INFO o.a.j.s.FileServer: Close: datagen/listado.csv
+2022-03-23 18:47:19,682 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)

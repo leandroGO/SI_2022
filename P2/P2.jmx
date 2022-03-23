@@ -24,7 +24,7 @@
             </elementProp>
           </collectionProp>
         </elementProp>
-        <stringProp name="HTTPSampler.domain">10.1.11.2</stringProp>
+        <stringProp name="HTTPSampler.domain">10.250.1.71</stringProp>
         <stringProp name="HTTPSampler.port">8080</stringProp>
         <stringProp name="HTTPSampler.protocol"></stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
@@ -38,7 +38,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="samples" elementType="Argument">
             <stringProp name="Argument.name">samples</stringProp>
-            <stringProp name="Argument.value">1000</stringProp>
+            <stringProp name="Argument.value">10</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
