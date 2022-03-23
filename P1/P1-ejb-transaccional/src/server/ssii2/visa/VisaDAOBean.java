@@ -215,6 +215,7 @@ public class VisaDAOBean extends DBTester implements VisaDAOLocal {
         ResultSet rs = null;
         boolean ret = false;
         String codRespuesta = "999"; // En principio, denegado
+        double saldo = 0;
 
         // TODO: Utilizar en funcion de isPrepared()
         PreparedStatement pstmt = null;
@@ -240,23 +241,27 @@ public class VisaDAOBean extends DBTester implements VisaDAOLocal {
             if (isPrepared() == true) {
                 String selectSaldo = SELECT_SALDO_QRY;
                 pstmt = con.prepareStatement(selectSaldo);
-                errorLog(selectSaldo);
                 pstmt.setString(1, pago.getTarjeta().getNumero());
                 ret = false;
                 rs = pstmt.executeQuery();
-                double saldo = rs.getDouble(1);
-                if (saldo < pago.getImporte()) {
-                    pago.setIdAutorizacion(null);
-                }
-                else {
-                    ret = true;
+
+                if (rs.next()) {
+                    saldo = rs.getDouble("saldo");
+                    if (saldo < pago.getImporte()) {
+                        pago.setIdAutorizacion(null);
+                    }
+                    else {
+                        ret = true;
+                    }
+
+                } else {
+                    ret = false;
                 }
                 pstmt.close();
 
                 if (ret) {
                     String updateSaldo = UPDATE_SALDO_QRY;
                     pstmt = con.prepareStatement(updateSaldo);
-                    errorLog(updateSaldo);
                     pstmt.setDouble(1, saldo - pago.getImporte());
                     pstmt.setString(2, pago.getTarjeta().getNumero());
                     ret = false;
@@ -265,10 +270,11 @@ public class VisaDAOBean extends DBTester implements VisaDAOLocal {
                         ret = true;
                     }
                     else {
-                        throw new EJBException();
+                        throw new EJBException("Error actualizando el saldo.");
                     }
+                    pstmt.close();
                 }
-                pstmt.close();
+                
 
                 if (ret) {
                     String insert  = INSERT_PAGOS_QRY;
@@ -284,7 +290,7 @@ public class VisaDAOBean extends DBTester implements VisaDAOLocal {
                         ret = true;
                     }
                     else {
-                        throw new EJBException();
+                        throw new EJBException("Error registrando pago.");
                     }
                 }
                 
@@ -333,7 +339,7 @@ public class VisaDAOBean extends DBTester implements VisaDAOLocal {
 
         } catch (Exception e) {
             errorLog(e.toString());
-            throw new EJBException();
+            throw new EJBException(e.toString());
         } finally {
             try {
                 if (rs != null) {

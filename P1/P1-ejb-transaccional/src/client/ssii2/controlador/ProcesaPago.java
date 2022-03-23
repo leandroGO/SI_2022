@@ -208,7 +208,7 @@ private void printAddresses(HttpServletRequest request, HttpServletResponse resp
             if (sesion != null) {
                 sesion.invalidate();
             }
-            reenvia("/muestraerror.jsp", request, response);
+            enviaError(e, request, response);
             return;
         }
 
